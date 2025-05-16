@@ -13,10 +13,13 @@ def strings_xml_to_csv(input_xml_path, output_csv_path):
         writer = csv.writer(csvfile)
         writer.writerow(['Key', 'Value'])
 
-        for string in root.findall('string'):
-            name = string.get('name')
-            value = string.text or ''
-            writer.writerow([name, value])
+        for elem in root:
+            if elem.tag == 'string':
+                writer.writerow([elem.attrib['name'], elem.text or ''])
+            elif elem.tag == 'string-array':
+                for i, item in enumerate(elem.findall('item')):
+                    key = f"{elem.attrib['name']}[{i}]"
+                    writer.writerow([key, item.text or ''])
 
 def batch_convert_folder(input_folder, output_folder):
     for root, dirs, files in os.walk(input_folder):

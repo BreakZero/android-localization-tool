@@ -6,4 +6,11 @@
   <string name="template4">Should I act on what I'm thinking about right now?</string>
   <string name="template5">I'm not satisfied with my current job — am I suited for entrepreneurship?</string>
   <string name="template6">Is now the right time for me to resign?</string>
+  <string-array name="personality_rating_label">
+    <item>Strongly disagree</item>
+    <item>Disagree</item>
+    <item>Neutral</item>
+    <item>Agree</item>
+    <item>Strongly agree</item>
+  </string-array>
 </resources>

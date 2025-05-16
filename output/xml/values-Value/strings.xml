@@ -6,4 +6,11 @@
   <string name="template4">心里正在想的事，要不要去做？</string>
   <string name="template5">对现在的工作不满意，我适合创业吗？</string>
   <string name="template6">我现在适合辞职吗？</string>
+  <string-array name="personality_rating_label">
+    <item>非常不符合</item>
+    <item>不太符合</item>
+    <item>中立</item>
+    <item>比较符合</item>
+    <item>非常符合</item>
+  </string-array>
 </resources>
